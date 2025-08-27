@@ -8,23 +8,39 @@
     </title>
     <body>
         <h1 style="text-align:center;">Documenting different APTs I find interesting</h1>
+        <!-- Adding some padding between title and the different APTs -->
         <div style="height: 50px; width: 100%;"></div>
-        <div style="width:500px; height: 150px; border-style: dashed; padding: 5px;">
+
+        <!--  -->
+        <div style="width:400px; height: 150px; border-style: dashed; padding: 5px;">
             <h3>APT1</h3>
             <img style="width: 54px; height: 32px;" src="img/flags/PRC.png"/>
             <h4>Alleged origin: China</h4>
             <a href="https://en.wikipedia.org/wiki/PLA_Unit_61398">Source</a>
         </div>
+
+        <!--  -->
         <div style="height: 50px; width: 100%;"></div>
-        <div style="width:500px; height: 150px; border-style: dashed; padding: 5px;">
+
+
+        <div style="width:400px; height: 150px; border-style: dashed; padding: 5px;">
             <h3>APT28</h3>
             <img style="width: 54px; height: 32px; " src="img/flags/RUS.png"/>
             <h4>Alleged origin: Russia</h4>
             <a href="https://en.wikipedia.org/wiki/Fancy_Bear">Source</a>
         </div>
         <div style="height: 100px; width: 100%;"></div>
+
+        <h2>Submit feedback</h2>
         <form>
-            
+            <input type="radio" id="missing" name="Contact" disabled/>
+            <label for="missing" name="Contact">Something's missing [Yes alot is missing right now, site is still under construction]</label><br>
+
+            <input type="radio" id="wrong" name="Contact"/>
+            <label for="wrong" name="Contact">Something's incorrect</label><br>
+
+            <label for="email" name="Contact">Email Address</label>
+            <input type="email" id="email" name="Contact"/>
         </form>
     </body>
 </html>

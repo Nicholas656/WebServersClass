@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+            .aptBox{
+                border-style: 1px solid black;
+                padding: 5px;
+
+            }
+
+            .aptBox:hover{
+                color:#181818;	
+                border: 1px solid transparent; 
+                border-image: url("img/thants.gif") 2 repeat; 
+                /*background-color: #e6e6e6;*/
+            }
+        </style>
         <!--<link rel="stylesheet" href="index.css">-->
         <script>
-            function onClickHandler()
+            function formOnClickHandler()
             {
                 var form = document.forms["feedback"];
                 var radioMissing = form["missing"];
@@ -13,6 +27,18 @@
                 var message = form["additional"];
                 var msg = radioMissing.checked + " " + radioWrong.checked + " " + radioQuestion.checked + "\n" + email.value + "\n" + additional.value;
                 window.alert(msg);
+            }
+
+            function aptOnHover(element)
+            {
+                var img = element.getElementsByClassName("preview")[0].getElementsByTagName("img")[0];
+                img.style.opacity = "90%";
+            }
+
+            function aptOnLeave(element)
+            {
+                var img = element.getElementsByClassName("preview")[0].getElementsByTagName("img")[0];
+                img.style.opacity = "60%";
             }
         </script>
     </head>
@@ -26,15 +52,19 @@
 
         <!-- Simple padding to keep things nice -->
         <!-- APT-1 "box" -->
-        <div style="width:350px; height: 165px; border-style: dashed; padding: 5px;">
-            <img style="width: 54px; height: 32px; vertical-align: top; float: right;" src="img/flags/PRC.png"/>
-            <h3>APT1</h3>
-            <h4>Alleged origin: China</h4>
-            <ul>
-                <li>Shady RAT</li>
-                <li>GhostNet</li>
-            </ul>
-            <a href="https://en.wikipedia.org/wiki/PLA_Unit_61398">Source</a>
+        <div style="width:145px; height: 145px;" onmouseenter="aptOnHover(this)" onmouseleave="aptOnLeave(this)" class="aptBox">
+            <div style="width: 140px; height: 140px;; position: relative; justify-content: center; display: flex;" class="preview">
+                <img style="width: 135px; height: 80px; position: absolute; align-self: center; opacity: 60%;" src="img/flags/PRC.png"/>
+                <p style="position: absolute; font-size: 30px;">APT1</p>
+            </div>
+            <div hidden>
+                <h4>Alleged origin: China</h4>
+                <ul>
+                    <li>Shady RAT</li>
+                    <li>GhostNet</li>
+                </ul>
+                <a href="https://en.wikipedia.org/wiki/PLA_Unit_61398">Source</a>
+            </div>
         </div>
 
         <!-- Simple padding to keep things nice -->
@@ -78,7 +108,7 @@
             <textarea rows="5" cols="40" id="additional"></textarea>
 
             <br>
-            <input type="submit" id="submitForm" name="Contact" onclick="onClickHandler()"/>
+            <input type="submit" id="submitForm" name="Contact" onclick="formOnClickHandler()"/>
         </form>
     </body>
 </html>

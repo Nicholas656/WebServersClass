@@ -3,7 +3,7 @@
     <head>
         <!--<link rel="stylesheet" href="index.css">-->
         <script>
-            function onClickHandler()
+            function submitClickHandler()
             {
                 var form = document.forms["feedback"];
                 var radioMissing = form["missing"];
@@ -78,7 +78,7 @@
             <textarea rows="5" cols="40" id="additional"></textarea>
 
             <br>
-            <input type="submit" id="submitForm" name="Contact" onclick="onClickHandler()"/>
+            <input type="submit" id="submitForm" name="Contact" onclick="submitClickHandler()"/>
         </form>
     </body>
 </html>

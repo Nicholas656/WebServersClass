@@ -4,7 +4,6 @@
         <style>
             #container{
                 width:940px;
-                display: flex;
             }
 
             hr.divide {
@@ -20,7 +19,6 @@
 
             body{
                 background-color:#222222;
-                background-image: url("");
                 background-size:cover;
                 background-attachment: fixed;
                 font-family:sans-serif;
@@ -37,7 +35,6 @@
                 box-shadow:0px 0px 2px rgba(0,0,0,0.5);
                 display:inline-block;
                 overflow:hidden;
-                #float: left;
             }           
             #aptBox:hover{
                 transform:scale(1.125);
@@ -47,7 +44,16 @@
                 transition: 0.20s;
                 box-shadow:6px 6px 8px rgba(0,0,0,0.5);
                 z-index:50;
-            }           
+            }  
+            p{
+                color:white;
+            }   
+            #tListItem{
+                color:white;
+                float: left;
+                padding-left: 50px;
+                
+            }      
         </style>
         <!--<link rel="stylesheet" href="index.css">-->
         <script>
@@ -77,7 +83,7 @@
         </script>
     </head>
     <title>
-        <h1>Documenting APTs</h1>
+        Documenting APTs
     </title>
     <body>
         <h1 style="text-align:center; color:#FFFFFF;">Documenting different APTs I find interesting</h1>
@@ -87,19 +93,99 @@
         <!-- Simple padding to keep things nice -->
         <center> 
             <div id="container">
-                <p>
+                <a>
                     <div id="aptBox">
-                        <p style="color: #FFFFF;">
+                        <p style="color:white; ">APT-1</p>
+                        <img style="width: 60px; height: 40px; float:right; margin-right: 10px; position: absolute;" src="img/flags/PRC.png"/>
+                        <p style="float: left; padding-left: 10px;">Alleged origin: People's Republic of China</p>
+                        <br><br>
+                        <p style="float: none; position: absolute; padding-left: 10px;">Notable Operations:</p>
+                        <br>
+                        <ul style="position: relative; float: left; padding-left: 20px;">
+                            <br>
+                            <li id="tListItem">Operation Shady Rat</li>
+                            <br>
+                            <li id="tListItem">Ghostnet</li>
+                            <br>
+                        </ul>
+                        <div style="height: 65px;"></div>>
+                        <p style="float: none; position: absolute; padding-left: 20px;">Also known as:</p>
+                        <br>
+                        <ul style="position: absolute; float: left;">
+                            <br>
+                            <li id="tListItem">Comment Crew</li> <br>
+                            <li id="tListItem">Group 3</li> <br>
+                            <li id="tListItem">GIF89a</li> <br>
+                        </ul>
                     </div>
-                </p>
-                <div id="aptBox"></div>
+                </a>
+                <a>
+                    <div id="aptBox">
+			            <p style="color: white; ">APT-28</p>
+                        <img style="width: 60px; height: 40px; float:right; margin-right: 10px; position: absolute;" src="img/flags/RUS.png"/>
+                        <p style="float: left; padding-left: 10px;">Alleged origin: Russian Federation</p>
+                        <br><br>
+                        <p style="float: none; position: absolute; padding-left: 10px;">Notable Operations:</p>
+                        <br>
+                        <ul style="position: relative; float: left; padding-left: 20px;">
+                            <br>
+                            <li id="tListItem">2016 US Presidential Election cyberattack</li>
+                            <br>
+                            <li id="tListItem">French TV5Monde cyberattack</li>
+                            <br>
+                            <li id="tListItem" style="line-height: 200%;">International Olympic Committee cyberattack</li>
+                            <br>
+                            <br>
+                        </ul>
+                        <div style="height: 85px;"></div>
+                        <p style="float: none; position: absolute; padding-left: 20px;">Also known as:</p>
+                        <br>
+                        <ul style="position: absolute; float: left;">
+                            <br>
+                            <li id="tListItem">STRONTIUM</li> <br>
+                            <li id="tListItem">Fancy Bear</li> <br>
+                            <li id="tListItem">Sofacy Group</li> <br>
+                            <li id="tListItem">Tsar Team</li> <br>
+                        </ul>
+		            </div>
+                </a>
+                <a>
+                    <div id="aptBox">
+			            <p style="color: white; ">APT-28</p>
+                        <img style="width: 60px; height: 40px; float:right; margin-right: 10px; position: absolute;" src="img/flags/RUS.png"/>
+                        <p style="float: left; padding-left: 10px;">Alleged origin: Russian Federation</p>
+                        <br><br>
+                        <p style="float: none; position: absolute; padding-left: 10px;">Notable Operations:</p>
+                        <br>
+                        <ul style="position: relative; float: left; padding-left: 20px;">
+                            <br>
+                            <li id="tListItem">2016 US Presidential Election cyberattack</li>
+                            <br>
+                            <li id="tListItem">French TV5Monde cyberattack</li>
+                            <br>
+                            <li id="tListItem" style="line-height: 200%;">International Olympic Committee cyberattack</li>
+                            <br>
+                            <br>
+                        </ul>
+                        <div style="height: 85px;"></div>
+                        <p style="float: none; position: absolute; padding-left: 20px;">Also known as:</p>
+                        <br>
+                        <ul style="position: absolute; float: left;">
+                            <br>
+                            <li id="tListItem">STRONTIUM</li> <br>
+                            <li id="tListItem">Fancy Bear</li> <br>
+                            <li id="tListItem">Sofacy Group</li> <br>
+                            <li id="tListItem">Tsar Team</li> <br>
+                        </ul>
+		            </div>
+                </a>
             </div>
         </center>
         <br><br>
         <hr class="divide">
         <br>
         <!-- Feedback form -->
-        <div id="none" style="float: none">
+        <div id="none" style="float: none; color: white;">
             <h2>Submit feedback</h2>
             <form name="feedback">
                 <!-- Usage of attributes, in this case disabled -->

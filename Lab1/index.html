@@ -12,7 +12,28 @@
                 var email = form["email"];
                 var message = form["additional"];
                 var msg = radioMissing.checked + " " + radioWrong.checked + " " + radioQuestion.checked + "\n" + email.value + "\n" + additional.value;
+                if(!demo(email))
+                {
+                    document.getElementById("incorrect").innerHTML="Incorrect email!";
+                }else{
+                    document.getElementById("incorrect").innerHTML="";
+                }
                 window.alert(msg);
+            }
+
+            function demo(str) {
+                const isEmail = /^[a-z0-9.]{1,64}@[a-z0-9.]{1,64}$/i.test(str);
+                console.log(isEmail, str);
+                return isEmail;
+            }
+
+            function onHover(element)
+            {
+                element.style.borderStyle="Solid";
+            }
+            function onLeave(element)
+            {
+                element.style.borderStyle="Dashed";
             }
         </script>
     </head>
@@ -26,7 +47,7 @@
 
         <!-- Simple padding to keep things nice -->
         <!-- APT-1 "box" -->
-        <div style="width:350px; height: 165px; border-style: dashed; padding: 5px;">
+        <div style="width:350px; height: 165px; border-style: dashed; padding: 5px;" onmouseenter="onHover(this)" onmouseleave="onLeave(this)">
             <img style="width: 54px; height: 32px; vertical-align: top; float: right;" src="img/flags/PRC.png"/>
             <h3>APT1</h3>
             <h4>Alleged origin: China</h4>
@@ -41,7 +62,7 @@
         <div style="height: 50px; width: 100%;"></div>
 
         <!-- APT-28 "box" -->
-        <div style="width:350px; height: 165px; border-style: dashed; padding: 5px;">
+        <div style="width:350px; height: 165px; border-style: dashed; padding: 5px;" onmouseenter="onHover(this)" onmouseleave="onLeave(this)"> 
             <img style="width: 54px; height: 32px; vertical-align: top; float: right;" src="img/flags/RUS.png"/>
             <h3>APT28</h3>
             <h4>Alleged origin: Russia</h4>
@@ -72,6 +93,7 @@
             <label for="email" name="Contact" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">Email Address</label>
             <input type="email" id="email" name="Contact" required/> <br>
 
+            <p style="color: red;" id="incorrect"></p>
             <br>
 
             <!-- Multi-line textbox -->

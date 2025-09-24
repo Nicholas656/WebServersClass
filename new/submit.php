@@ -1,6 +1,3 @@
-<p>GET: <?= var_dump($_GET) ?></p>
-<p>POST: <?= var_dump($_POST) ?></p>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +15,7 @@
         echo "Email address: {$email}";
         echo "<br><br>";
         echo "Additional information:";
+        echo "<br>";
         echo "{$additional}";
     }
     ?>

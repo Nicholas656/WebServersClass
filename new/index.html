@@ -189,20 +189,20 @@
             <h2>Submit feedback</h2>
             <form name="feedback" action="submit.php" method="GET">
                 <!-- Usage of attributes, in this case disabled -->
-                <input type="radio" id="missing" name="Contact" style="color: white" disabled/>
-                <label for="missing" name="Contact">Something's missing [Yes alot is missing right now, site is still under construction]</label><br>
+                <input type="radio" id="missing" name="missing" style="color: white" disabled/>
+                <label for="missing" name="missing">Something's missing [Yes alot is missing right now, site is still under construction]</label><br>
     
-                <input type="radio" id="wrong" name="Contact"/>
-                <label for="wrong" name="Contact">Something's incorrect</label><br>
+                <input type="radio" id="wrong" name="wrong"/>
+                <label for="wrong" name="wrong">Something's incorrect</label><br>
     
-                <input type="radio" id="question" name="Contact"/>
-                <label for="question" name="Contact">I have a question</label><br>
+                <input type="radio" id="question" name="question"/>
+                <label for="question" name="question">I have a question</label><br>
     
                 <br>
     
                 <!-- Usage or regex for text "masking" -->
-                <label for="email" name="Contact" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">Email Address</label>
-                <input type="email" id="email" name="Contact" required/> <br>
+                <label for="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">Email Address</label>
+                <input type="email" id="email" name="email" required/> <br>
     
                 <br>
     

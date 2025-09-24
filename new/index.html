@@ -189,13 +189,13 @@
             <h2>Submit feedback</h2>
             <form name="feedback" action="submit.php" method="POST">
                 <!-- Usage of attributes, in this case disabled -->
-                <input type="radio" id="missing" name="reason" style="color: white" disabled/>
+                <input type="radio" id="missing" name="reason" style="color: white" disabled value="missing"/>
                 <label for="missing" name="missing">Something's missing [Yes alot is missing right now, site is still under construction]</label><br>
     
-                <input type="radio" id="wrong" name="reason"/>
+                <input type="radio" id="wrong" name="reason" value="wrong"/>
                 <label for="wrong" name="wrong">Something's incorrect</label><br>
     
-                <input type="radio" id="question" name="reason"/>
+                <input type="radio" id="question" name="reason" value="question"/>
                 <label for="question" name="question">I have a question</label><br>
     
                 <br>

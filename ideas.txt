@@ -1,0 +1,51 @@
+<script>
+                const xOnline = ["Online", "Offline"];
+                const yOnline = [10, 30];
+                const barColorsOnline = [ "#60FF80", "#FF7560"];
+                const barColorsOS = ["#357EC7","#D1D1D1","#FFBF00", "#222222"];
+                const onlineChart = document.getElementById('onlineStatus');
+                new Chart(onlineChart, {
+                  type: "pie",
+                  data: {
+                    labels: xOnline,
+                    datasets: [{
+                      backgroundColor: barColorsOnline,
+                      data: yOnline
+                    }]
+                  },
+                  options: {
+                    plugins: {
+                      legend: {display:true},
+                      title: {
+                        display: true,
+                        text: "Total online clients",
+                        font: {size:16}
+                      }
+                    }
+                  }
+                });
+
+                const xOS = ["Windows", "Mac", "Linux", "Unknown"];
+                const yOS = [10,4,2,1];
+                const osChart = document.getElementById('osStatus');
+                new Chart(osChart, {
+                  type: "pie",
+                  data: {
+                    labels: xOS,
+                    datasets: [{
+                      backgroundColor: barColorsOS,
+                      data: yOS
+                    }]
+                  },
+                  options: {
+                    plugins: {
+                      legend: {display:true},
+                      title: {
+                        display: true,
+                        text: "Client OS types",
+                        font: {size:16}
+                      }
+                    }
+                  }
+                });
+                </script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <title>AddClient</title>
+    <body>
+      <form action="/WebServersClass/AddClient.php" method="post">
+      <label for="countryCode">Specify Client Country:</label>
+      <input type="text" id="countryCode" name="countryCode" class="countryCode" pattern="^[A-Z]{2,}$" title="Enter country code"><br/> <br/>
+
+        <label for="machineName">Specify Client Name:</label>
+        <input type="text" id="machineName" name="machineName" class="machineName"> <br/> <br/>
+
+        <label for="machineOS">Specify Client OS:</label>
+        <select id="machineOS" class="machineOS" name="machineOS">
+            <option value="Windows">Windows</option>
+            <option value="macOS">Mac</option>
+            <option value="Linux">Linux</option>
+            <option value="Unknown">Unknown</option>
+        </select> <br/> <br/>
+        
+        <label for="lastOnline">Specify Client's last online time:</label>
+        <input type="datetime-local" id="lastOnline" name="lastOnline" class="lastOnline"> 
+        <br/> <br/>
+        
+        <label for="uptime">Specify Client's uptime (Days:Hours:Minutes:Seconds)</label>
+        <input type="text" id="uptime" name="uptime" class="uptime" pattern="^\d{4}:([0-1]\d|2[0-3]):([0-5]\d):([0-5]\d)$" title="DDDD:HH:MM:SS">
+        <br/>
+
+        <input type="submit" value="Add Client">
+    </form>
+    </body>
+</html>
